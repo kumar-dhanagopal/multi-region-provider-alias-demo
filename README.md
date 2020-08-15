@@ -8,46 +8,35 @@ For this demonstration, we implement cross-region Object Storage replication by 
 
 ## Usage Instructions
 1. Complete the prerequisites described in https://github.com/oracle-quickstart/oci-prerequisites.
-
 2. Clone this repository.
-
   ```
   git clone https://github.com/kumar-dhanagopal/multi-region-provider-alias-demo.git
   cd multi-region-provider-alias-demo
   ```
 3. Copy `terraform.tfvars.example` in the top-level directory to `terraform.tfvars`.
-
 4. Open `terraform.tfvars` in a plain-text editor, and specify values for the variables in the file.
-
-4. Initialize Terraform.
-
+5. Initialize Terraform.
   ```
   terraform init
   ```
-5. Review the plan.
-
+6. Review the plan.
   ```
   terraform plan
   ```
-6. Apply the configuration.
-
+7. Apply the configuration.
   ```
   terraform apply -parallelism=1
   ```
   **Note**: The `parallelism=1` option ensures that Terraform performs only one operation at a time. This restriction is necessary because the tenancy-level resources created by this configuration (such as the IAM policy) need to be propagated across all the regions, which might take a few minutes. Eliminating parallelism gives us a better chance of making sure that such resources are fully propagated before the subsequent/dependent operations start.
-  
   When you’re prompted to confirm the action, enter **yes**.
-
   When all components have been created, Terraform displays a completion message. 
   For example:
   ```
   Apply complete! Resources: 4 added, 0 changed, 0 destroyed.
   ```
   **Note**: If an error occurs indicating that a resources wasn't created, run `terraform apply -parallelism=1` again.
-
 If you want to delete the infrastructure, run:
  ```
   $ terraform destroy
   ```
-
   When you’re prompted to confirm the action, enter **yes**.
