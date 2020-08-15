@@ -3,26 +3,26 @@ This Terraform configuration demonstrates the use of the [provider alias feature
 # Usage
 1. Complete the prerequisites described in https://github.com/oracle-quickstart/oci-prerequisites.
 
-2. Clone the repo
+2. Clone this repository.
 
   ```
   git clone https://github.com/kumar-dhanagopal/multi-region-provider-alias-demo.git
   cd multi-region-provider-alias-demo
   ```
-2. Open `terraform.tfvars` in the top-level directory in a text editor, and set values for all the variables in that file.
+3. Open `terraform.tfvars` in the top-level directory in a text editor, and set values for all the variables in that file.
 
-3. Initialize Terraform. This will also download the latest `oci` provider.
+4. Initialize Terraform. This will also download the latest `oci` provider.
 
   ```
   terraform init
   ```
-4. Review the plan.
+5. Review the plan.
 
   ```
   terraform plan
   ```
 
-5. Apply the configuration.
+6. Apply the configuration.
 
   ```
   terraform apply -parallelism=1
