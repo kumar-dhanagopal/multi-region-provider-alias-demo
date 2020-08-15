@@ -1,6 +1,12 @@
 # Deploy Resources Across Multiple Oracle Cloud Regions
 This Terraform configuration demonstrates the use of the [provider alias feature](https://www.terraform.io/docs/configuration/providers.html#alias-multiple-provider-configurations) to automate the deployment of Oracle Cloud Infrastructure resources across multiple regions.
-# Usage
+## Scenario
+For this demonstration, we implement cross-region Object Storage replication by creating the following resources.
+- An IAM policy to allow the Object Storage service in a primary region (designated by you) to manage buckets in a compartment that you specify.
+- Two Object Storage buckets, one in the primary region and the other in the standby region. You specify the regions.
+- A replication policy to copy objects from the bucket in the primary region to the bucket in the standby region.
+
+## Usage Instructions
 1. Complete the prerequisites described in https://github.com/oracle-quickstart/oci-prerequisites.
 
 2. Clone this repository.
