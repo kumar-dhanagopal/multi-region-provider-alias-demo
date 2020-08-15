@@ -8,6 +8,6 @@ resource "oci_objectstorage_replication_policy" "replication_policy" {
   destination_bucket_name             = var.bucket_standby
   destination_region_name             = var.region_standby
   name                                = "demo_replication_policy"
-  delete_object_in_destination_bucket = "ACCEPT"
+  delete_object_in_destination_bucket = "DECLINED"
   namespace                           = var.namespace
 }
