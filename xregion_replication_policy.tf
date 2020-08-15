@@ -2,9 +2,7 @@ resource "oci_objectstorage_replication_policy" "replication_policy" {
   depends_on = [
     oci_identity_policy.object_storage_replication,
     oci_objectstorage_bucket.bucket_primary,
-    oci_objectstorage_bucket.bucket_standby,
-    oci_identity_policies.policies_primary_region,
-    oci_identity_policies.policies_standby_region
+    oci_objectstorage_bucket.bucket_standby
   ]
   bucket                              = var.bucket_primary
   destination_bucket_name             = var.bucket_standby
