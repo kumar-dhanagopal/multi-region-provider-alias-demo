@@ -75,7 +75,7 @@ To delete all the resources, including the buckets, run the following command:
   Delete all object versions first..
   http status code: 409. Opc request id: iad-1:...
   ```
-If you want to delete the buckets as well, then remove all the objects from the buckets, and then run the following command:
+If you want to delete the buckets as well, then remove all the objects from the buckets (using the web console, CLI, or any other interface), and then run the following command:
  ```
   $ terraform destroy
   ```
