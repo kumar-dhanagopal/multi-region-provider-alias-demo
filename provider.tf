@@ -1,17 +1,17 @@
 provider "oci" {
   alias            = "primary_region"
-  tenancy_ocid     = var.tenancy_ocid
-  user_ocid        = var.user_ocid
+  tenancy_ocid     = var.tenancy
+  user_ocid        = var.user
   fingerprint      = var.fingerprint
-  private_key_path = var.private_key_file
-  region           = var.primary_region
+  private_key_path = var.private_key
+  region           = var.region_primary
 }
 
 provider "oci" {
   alias            = "standby_region"
-  tenancy_ocid     = var.tenancy_ocid
-  user_ocid        = var.user_ocid
+  tenancy_ocid     = var.tenancy
+  user_ocid        = var.user
   fingerprint      = var.fingerprint
-  private_key_path = var.private_key_file
-  region           = var.standby_region
+  private_key_path = var.private_key
+  region           = var.region_standby
 }
