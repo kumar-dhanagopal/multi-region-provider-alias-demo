@@ -47,7 +47,9 @@ The resources are created in the following order:
   
   **Note**: The operation to create the Object Storage replicatiopn policy might fail, because the IAM policy to allow the replication might not have been propagated across all the regions. In such a case, the following error message is displayed:
   ```
-  Error: Service error:InsufficientServicePermissions. Permissions granted to the object storage service in this region are insufficient to execute this policy.. http status code: 400. Opc request id: iad-1:...
+  Error: Service error:InsufficientServicePermissions.
+  Permissions granted to the object storage service in this region are insufficient to execute this policy.. 
+  http status code: 400. Opc request id: iad-1:...
 
   on xregion_replication_policy.tf line 1, in resource "oci_objectstorage_replication_policy" "replication_policy":
    1: resource "oci_objectstorage_replication_policy" "replication_policy" {
@@ -60,16 +62,21 @@ To delete all the resources, including the buckets, run the following command:
   $ terraform destroy
   ```
   When you’re prompted to confirm the action, enter **yes**.
+  
   If the buckets are not empty, the following error occurs:
   ```
-  Error: Service error:BucketNotEmpty. Bucket named 'standby' is not empty. Delete all object versions first.. http status code: 409. Opc request id: phx-1:2B3S_BZNDOgh9qgJEsM8oLsFHyRyhh_wVXGleg16X6BJmnUxs_PV8xk8ya0iQ9An
+  Error: Service error:BucketNotEmpty.
+  Bucket named 'standby' is not empty.
+  Delete all object versions first.. 
+  http status code: 409. Opc request id: phx-1:2...
 
-Error: Service error:BucketNotEmpty. Bucket named 'primary' is not empty. Delete all object versions first.. http status code: 409. Opc request id: iad-1:B07vpG6kqcl5sDyx6a7y0kdTuMD8uh94xMvvgnaU61In5bsHLNAmmHKHAgqDzWw5
-```
-  
+  Error: Service error:BucketNotEmpty.
+  Bucket named 'primary' is not empty.
+  Delete all object versions first..
+  http status code: 409. Opc request id: iad-1:...
+  ```
 If you want to delete the buckets as well, then remove all the objects from the buckets, and then run the following command:
  ```
   $ terraform destroy
   ```
   When you’re prompted to confirm the action, enter **yes**.
-  
