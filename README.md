@@ -2,13 +2,15 @@
 This Terraform configuration demonstrates the use of the [provider alias feature](https://www.terraform.io/docs/configuration/providers.html#alias-multiple-provider-configurations) to automate the deployment of Oracle Cloud Infrastructure resources across multiple regions.
 # Usage
 1. Complete the prerequisites described in https://github.com/oracle-quickstart/oci-prerequisites.
-1) Clone the repo
+
+2. Clone the repo
 
   ```
   git clone https://github.com/kumar-dhanagopal/multi-region-provider-alias-demo.git
   cd multi-region-provider-alias-demo
   ```
 2. Open `terraform.tfvars` in the top-level directory in a text editor, and set values for all the variables in that file.
+
 3. Initialize Terraform. This will also download the latest `oci` provider.
 
   ```
