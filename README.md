@@ -15,9 +15,11 @@ For this demonstration, we implement cross-region Object Storage replication by 
   git clone https://github.com/kumar-dhanagopal/multi-region-provider-alias-demo.git
   cd multi-region-provider-alias-demo
   ```
-3. Open `terraform.tfvars` in the top-level directory in a text editor, and set values for all the variables in that file.
+3. Copy `terraform.tfvars.example` in the top-level directory to `terraform.tfvars`.
 
-4. Initialize Terraform. This will also download the latest `oci` provider.
+4. Open `terraform.tfvars` in a plain-text editor, and specify values for the variables in the file.
+
+4. Initialize Terraform.
 
   ```
   terraform init
@@ -27,7 +29,6 @@ For this demonstration, we implement cross-region Object Storage replication by 
   ```
   terraform plan
   ```
-
 6. Apply the configuration.
 
   ```
