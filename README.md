@@ -7,6 +7,7 @@ For this demonstration, we implement cross-region Object Storage replication by 
 - A replication policy to copy objects from the bucket in the primary region to the bucket in the standby region.
 
 ## Usage Instructions
+### Provision Resources
 1. Complete the prerequisites described in https://github.com/oracle-quickstart/oci-prerequisites.
 2. Clone this repository.
   ```
@@ -40,7 +41,10 @@ For this demonstration, we implement cross-region Object Storage replication by 
   
   **Note**: If an error occurs indicating that a resources wasn't created, run `terraform apply -parallelism=1` again.
 
-If you want to delete the infrastructure, run:
+### Remove Resources
+To delete the infrastructure, complete the following steps:
+1. Delete all the objects in the bucket in the primary region.
+2. Run the following command:
  ```
   $ terraform destroy
   ```
