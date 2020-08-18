@@ -45,7 +45,9 @@ The resources are created in the following order:
   Apply complete! Resources: 4 added, 0 changed, 0 destroyed.
   ```
   
-  **Note**: The operation to create the Object Storage replicatiopn policy might fail, because the IAM policy to allow the replication might not have been propagated across all the regions. In such a case, the following error message is displayed:
+  **Note**: Before creating the Object Storage replication policy, Terraform needs to wait for the IAM policy that allows the object-storage replication to be propagated across all the regions. The code includes a `time_sleep` resource that forces Terraform to wait 15 seconds after IAM policy is created. You can change this wait time by using the `wait_before_creating_xregion_replication_policy` variable in `terraform.tfvars`.
+  
+  If the wait time specified isn't enough, the following error message is displayed:
   ```
   Error: Service error:InsufficientServicePermissions.
   Permissions granted to the object storage service in this region are insufficient to execute this policy.. 
@@ -54,7 +56,7 @@ The resources are created in the following order:
   on xregion_replication_policy.tf line 1, in resource "oci_objectstorage_replication_policy" "replication_policy":
    1: resource "oci_objectstorage_replication_policy" "replication_policy" {
   ```
-  If this error occurs, wait a minutes or two (to allow the IAM policy to propagate across all the regions), and then run `terraform apply` again.
+  If this error occurs, wait a few seconds to allow the IAM policy to propagate across all the regions, and then run `terraform apply` again. Consider increasing the wait time to prevent this error in the future.
 
 ### Remove Resources
 To delete all the resources, including the buckets, run the following command:
