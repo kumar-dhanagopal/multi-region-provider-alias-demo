@@ -13,6 +13,10 @@ For this demonstration, we implement cross-region Object Storage replication by 
 The resources are created in the following order:
 **Note**: An explicit dependency is defined in `xregion_replication_policy.tf` to ensure that Terraform creates the cross-region Object Region replication policy only after the two buckets and the required IAM policy are created.
 
+The following diagram shows the architecture:
+
+![Cross-Region Object Storage Replication](cross-region-object-storage-replication.png)
+
 ## Usage Instructions
 ### Provision Resources
 1. Complete the prerequisites described in https://github.com/oracle-quickstart/oci-prerequisites.
