@@ -20,6 +20,11 @@ The following diagram shows the architecture:
 ## Usage Instructions
 ### Provision Resources
 1. Complete the prerequisites described in https://github.com/oracle-quickstart/oci-prerequisites.
+2. Configure the necessary IAM permissions.
+   
+   See [Required IAM Policies](https://docs.cloud.oracle.com/en-us/iaas/Content/Object/Tasks/usingreplication.htm#permissions). 
+   
+   If you don't have administrator privileges to create policies, contact your tenancy administrator.
 2. Clone this repository.
   ```
   git clone https://github.com/kumar-dhanagopal/multi-region-provider-alias-demo.git
