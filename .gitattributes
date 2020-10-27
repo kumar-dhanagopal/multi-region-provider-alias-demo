@@ -1,5 +1,5 @@
 # exclude files not required in the release zip
 .git* export-ignore
-.md export-ignore
-.png export-ignore
+.md* export-ignore
+.png* export-ignore
 .tfvars* export-ignore
