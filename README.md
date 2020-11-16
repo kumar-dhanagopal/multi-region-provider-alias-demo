@@ -22,9 +22,9 @@ The following diagram shows the architecture:
 
 You can use either of the following deployment methods:
 
-- Pull the code in this repository to Oracle Cloud Infrastructure Resource Manager with a single click, create the stack, and deploy it. 
+- Pull the Terraform configuration in this repository to Oracle Cloud Infrastructure Resource Manager with a single click, create a stack, and deploy it. 
 
-- Download the code from GitHub to your computer, customize the code, and deploy the architecture by using the Terraform CLI. 
+- Download the Terraform configuration to your computer, customize the configuration, and deploy the resources by using the Terraform CLI. 
 
 ### One-Click Deployment
 [![Deploy to Oracle Cloud](https://oci-resourcemanager-plugin.plugins.oci.oraclecloud.com/latest/deploy-to-oracle-cloud.svg)](https://console.us-phoenix-1.oraclecloud.com/resourcemanager/stacks/create?region=home&zipUrl=one-click.zip)
