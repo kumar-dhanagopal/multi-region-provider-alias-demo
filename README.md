@@ -1,5 +1,5 @@
 
-# Deploy Resources Across Multiple Oracle Cloud Regions
+# Provision Resources Across Multiple Oracle Cloud Regions
 This Terraform configuration demonstrates the use of the [provider alias feature](https://www.terraform.io/docs/configuration/providers.html#alias-multiple-provider-configurations) to automate the deployment of Oracle Cloud Infrastructure resources across multiple regions.
 - [Scenario](#scenario)
 - [Usage Instructions](#usage-instructions)
@@ -18,10 +18,16 @@ The following diagram shows the architecture:
 
 ![Cross-Region Object Storage Replication](cross-region-object-storage-replication.png)
 
-## Usage Instructions
+## Deploying the Resources
+
+You can the code in this repository to Oracle Cloud Infrastructure Resource Manager with a single click, create the stack, and deploy it. 
+
+Alternatively, you can download the code from GitHub to your computer, customize the code, and deploy the architecture by using the Terraform CLI. 
+
 ### One-Click Deployment
 [![Deploy to Oracle Cloud](https://oci-resourcemanager-plugin.plugins.oci.oraclecloud.com/latest/deploy-to-oracle-cloud.svg)](https://console.us-phoenix-1.oraclecloud.com/resourcemanager/stacks/create?region=home&zipUrl=one-click.zip)
-### Provision Resources Using the Terraform CLI
+
+### Provisioning Resources Using the Terraform CLI
 1. Complete the prerequisites described in https://github.com/oracle-quickstart/oci-prerequisites.
 2. Configure the necessary IAM permissions.
    
