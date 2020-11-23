@@ -1,6 +1,6 @@
 
 # Provision Resources Across Multiple Oracle Cloud Regions
-This Terraform configuration demonstrates the use of the [provider alias feature](https://www.terraform.io/docs/configuration/providers.html#alias-multiple-provider-configurations) to automate the deployment of Oracle Cloud Infrastructure resources across multiple regions.
+This Terraform configuration demonstrates how you can use the [provider alias feature](https://www.terraform.io/docs/configuration/providers.html#alias-multiple-provider-configurations) to automate the deployment of Oracle Cloud Infrastructure resources across multiple regions.
 - [Scenario](#scenario)
 - [Deploy the Resources](#deploy-the-resources)
 
