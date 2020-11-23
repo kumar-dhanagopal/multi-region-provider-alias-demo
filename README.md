@@ -5,7 +5,7 @@ This Terraform configuration demonstrates how you can use the [provider alias fe
 - [Deploy the Resources](#deploy-the-resources)
 
 ## Scenario
-For this demonstration, we implement cross-region Object Storage replication by creating the following resources.
+For this demonstration, we implement cross-region replication of data stored in the Object Storage service, by creating the following resources.
 - An IAM policy in the home region of the tenancy, to allow the Object Storage service in a primary region (designated by you) to manage buckets in a compartment that you specify.
 - Two Object Storage buckets, one in a primary region and the other in a standby region. You specify the regions.
 - An Object Storage replication policy in the primary region to copy objects from the bucket in the primary region to the bucket in the standby region.
